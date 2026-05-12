@@ -46,7 +46,7 @@ a:hover::after {
 .hero {
   width: 100%;
   min-height: 80vh;
-  background-image: url("../img/banner_youdrive_v3.svg");
+  background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
