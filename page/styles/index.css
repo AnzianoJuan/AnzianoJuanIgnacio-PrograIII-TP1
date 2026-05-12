@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
 }
 
 .contenedor-logo {
-  width: 250px;
+  width: 300px;
 }
 
 .imagen-logo {
@@ -17,4 +18,25 @@
   flex-direction: row;
   gap: 2rem;
   justify-content: space-between;
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: ""; /*obligatorio para que el pseudoelemento exista*/
+  width: 0%; /*empieza invisible (sin ancho)*/
+  position: absolute; /*se posiciona respecto al <a> (que tiene relative)*/
+  border-bottom: 2px solid #fff; /*la línea blanca de abajo*/
+  /*pegado abajo a la izquierda del link*/
+  bottom: 0;
+  left: 0;
+
+  transition: all 0.3s; /* anima cualquier cambio en 0.3 segundos*/
+}
+
+a:hover::after {
+  /*cuando pasás el mouse sobre el pseudoelemento(linea blanca de abajo)*/
+  width: 100%; /*aparece el pseudoelemento*/
 }

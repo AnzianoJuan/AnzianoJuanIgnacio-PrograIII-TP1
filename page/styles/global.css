@@ -1,6 +1,4 @@
-/* ===========================
-   VARIABLES / PALETA
-=========================== */
+
 :root {
     --color-fondo:        #141414;
     --color-fondo-card:   #1e1e1e;
@@ -16,18 +14,12 @@
     --color-borde:        #2e2e2e;
 }
 
-/* ===========================
-   RESET
-=========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===========================
-   BASE
-=========================== */
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -49,9 +41,6 @@ a {
     color: inherit;
 }
 
-/* ===========================
-   BOTONES
-=========================== */
 .btn-primario {
     background-color: var(--color-acento);
     color: var(--color-texto);
@@ -85,9 +74,6 @@ a {
     color: var(--color-fondo);
 }
 
-/* ===========================
-   TIPOGRAFIA
-=========================== */
 h1, h2, h3, h4 {
     font-weight: 400;
     letter-spacing: 1px;
