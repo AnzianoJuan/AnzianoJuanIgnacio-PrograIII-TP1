@@ -211,6 +211,105 @@ a:hover::after {
   font-weight: 500;
 }
 
+/* ===========================
+   SOBRE NOSOTROS
+=========================== */
+.nosotros {
+  padding: 80px 5%;
+  background-color: var(--color-fondo-suave);
+}
+
+.nosotros-contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nosotros-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.nosotros-texto h2 {
+  font-size: 2rem;
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+}
+
+.nosotros-bloque {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 2px solid var(--color-acento);
+  padding-left: 1.5rem;
+}
+
+.nosotros-bloque h3 {
+  color: var(--color-texto);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nosotros-bloque p {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.nosotros-imagen {
+  flex: 1;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+}
+
+/* ---- TABLET (max 768px) ---- */
+@media (max-width: 768px) {
+  .nosotros-contenido {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nosotros-imagen img {
+    height: 300px;
+  }
+}
+
+/* ---- CELULAR (max 480px) ---- */
+@media (max-width: 480px) {
+  .nosotros {
+    padding: 50px 5%;
+  }
+
+  .nosotros-imagen img {
+    height: 220px;
+  }
+
+  .nosotros-bloque {
+    padding-left: 1rem;
+  }
+}
+
+/* ---- MÍNIMO 300px ---- */
+@media (max-width: 320px) {
+  .nosotros-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .nosotros-bloque h3 {
+    font-size: 0.9rem;
+  }
+}
+
 /* ---- TABLET (max 768px) ---- */
 @media (max-width: 768px) {
   .vehiculo-card {
