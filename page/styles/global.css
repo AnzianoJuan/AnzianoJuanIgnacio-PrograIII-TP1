@@ -45,7 +45,7 @@ a {
   color: var(--color-texto);
   border: none;
 
-  padding: 10px 24px; /* ← reducí igual */
+  padding: 10px 24px; 
   font-size: 0.85rem;
   cursor: pointer;
   letter-spacing: 1px;
