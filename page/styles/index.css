@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  top: 0; /* ← necesario para que se pegue arriba */
+  z-index: 100; /* ← para que quede por encima del contenido al hacer scroll */
 }
 
 .contenedor-logo {
@@ -39,4 +41,38 @@ a::after {
 a:hover::after {
   /*cuando pasás el mouse sobre el pseudoelemento(linea blanca de abajo)*/
   width: 100%; /*aparece el pseudoelemento*/
+}
+
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  background-image: url("../img/banner_youdrive_v2.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.hero-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+}
+.btn-hero {
+  display: inline-block; /* ← agregá esto */
+
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 14px 36px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: #ffffff;
+  color: #141414;
 }
