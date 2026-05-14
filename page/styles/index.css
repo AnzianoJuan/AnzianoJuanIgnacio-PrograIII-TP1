@@ -3,17 +3,24 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 0; /* ← necesario para que se pegue arriba */
-  z-index: 100; /* ← para que quede por encima del contenido al hacer scroll */
+  top: 0; /* necesario para que se pegue arriba */
+  z-index: 100; /*  para que quede por encima del contenido al hacer scroll */
 }
+
+/*contenedor del logo con 300px*/
 
 .contenedor-logo {
   width: 300px;
 }
 
+/*iamgen logo que cubra el 100% de cu contenedro
+ asi no se comporta "raro"*/
+
 .imagen-logo {
   width: 100%;
 }
+
+/*el nav que sea flex asi es mas facil manipular sus elementos*/
 
 .nav-ul {
   display: flex;
@@ -25,6 +32,8 @@
 a {
   position: relative;
 }
+
+/*pseudo elemento creado y reutilizado en este caso para el nav*/
 
 a::after {
   content: ""; /*obligatorio para que el pseudoelemento exista*/
@@ -43,6 +52,9 @@ a:hover::after {
   width: 100%; /*aparece el pseudoelemento*/
 }
 
+/*seccion hero que superpone un texto en la 
+imagen , y se busca con el metodo = url()*/
+
 .hero {
   width: 100%;
   min-height: 80vh;
@@ -54,12 +66,22 @@ a:hover::after {
   padding: 0 5%;
 }
 
+/*los textos de la seccion hero van a tener un comportamiento
+en columna*/
+
 .hero-texto {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   max-width: 500px;
 }
+
+.p-hero{
+  color: rgb(255, 255, 255);
+}
+
+/*boton que aparece en el hero transparente*/
+
 .btn-hero {
   display: inline-block;
 
@@ -74,16 +96,16 @@ a:hover::after {
   transition: all 0.3s;
 }
 
+/*cambio su estilo en funcion del estado del btn-hero*/
+
 .btn-hero:hover {
   background-color: #ffffff;
   color: #141414;
 }
 
-/* ===========================
-   SERVICIOS
-=========================== */
+/* SERVICIOS */
 .servicios {
-  padding: 80px 5%;
+  padding: 80px;
   background-color: var(--color-fondo-gris);
 }
 
@@ -94,6 +116,8 @@ a:hover::after {
   color: var(--color-texto);
 }
 
+/*contenedor de las cards de servicios*/
+
 .servicios-flex {
   display: flex;
   flex-direction: row;
@@ -102,11 +126,13 @@ a:hover::after {
   gap: 2rem;
 }
 
+/*configuracion para cada carta*/
+
 .servicio-card {
   background-color: var(--color-fondo-card);
   border: 1px solid var(--color-borde);
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,6 +140,10 @@ a:hover::after {
   gap: 1rem;
   width: 180px;
   transition: border-color 0.3s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .sobre-nosotros-h2 {
@@ -125,15 +155,20 @@ a:hover::after {
   height: 60px;
 }
 
+/*se le aplica a todos los hijos de card que sean h3*/
+
 .servicio-card h3 {
   color: var(--color-texto);
   font-size: 1rem;
 }
 
+/*se le aplica a todos los hijos de card que sean p*/
+
+
 .servicio-card p {
   color: var(--color-texto-suave);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ===========================
@@ -162,12 +197,16 @@ a:hover::after {
 .vehiculo-card {
   background-color: var(--color-fondo-card);
   border: 1px solid var(--color-borde);
-  border-radius: 8px;
-  width: 260px;
+  border-radius: 10px;
+  width: 250px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: border-color 0.3s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .vehiculo-img {
@@ -185,7 +224,7 @@ a:hover::after {
 
 .vehiculo-info h3 {
   color: var(--color-texto);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .vehiculo-tipo {
@@ -207,10 +246,10 @@ a:hover::after {
   font-weight: 500;
 }
 
-/* ===========================
-   SOBRE NOSOTROS
-=========================== */
+/* SOBRE NOSOTROS */
 .nosotros {
+  color: var(--color-texto);
+
   padding: 80px 5%;
   background-color: var(--color-fondo-suave);
 }
@@ -250,30 +289,25 @@ a:hover::after {
 
 .nosotros-bloque p {
   color: var(--color-texto-suave);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* ---- TABLET (max 768px) ---- */
+/*NOSOTROS RESPONSIVE*/
+
+/* TABLET  */
 @media (max-width: 768px) {
   .nosotros-contenido {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .nosotros-imagen img {
-    height: 300px;
-  }
 }
 
-/* ---- CELULAR (max 480px) ---- */
+/*  CELULAR (max 480px) */
 @media (max-width: 480px) {
   .nosotros {
     padding: 50px 5%;
-  }
-
-  .nosotros-imagen img {
-    height: 220px;
   }
 
   .nosotros-bloque {
@@ -281,18 +315,20 @@ a:hover::after {
   }
 }
 
-/* ---- MÍNIMO 300px ---- */
+/* MÍNIMO 300px  */
 @media (max-width: 320px) {
   .nosotros-texto h2 {
     font-size: 1.5rem;
   }
 
   .nosotros-bloque h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
-/* ---- TABLET (max 768px) ---- */
+/*seccion vehiculos destacados card RESPONSIVE*/
+
+/*  TABLET  */
 @media (max-width: 768px) {
   .vehiculo-card {
     width: 220px;
@@ -303,7 +339,7 @@ a:hover::after {
   }
 }
 
-/* ---- CELULAR (max 480px) ---- */
+/* CELULAR */
 @media (max-width: 480px) {
   .destacados {
     padding: 50px 5%;
@@ -318,7 +354,7 @@ a:hover::after {
   }
 }
 
-/* ---- MÍNIMO 300px ---- */
+/*  MÍNIMO 300px  */
 @media (max-width: 320px) {
   .vehiculo-info {
     padding: 1rem;
@@ -329,14 +365,16 @@ a:hover::after {
   }
 }
 
-/* ---- TABLET (max 768px) ---- */
+/*RESPONSIVE DE SERVICIO*/
+
+/*  TABLET  */
 @media (max-width: 768px) {
   .servicio-card {
     width: 150px;
   }
 }
 
-/* ---- CELULAR (max 480px) ---- */
+/* CELULAR  */
 @media (max-width: 480px) {
   .servicio-card {
     width: 130px;
@@ -348,17 +386,19 @@ a:hover::after {
   }
 }
 
-/* ---- MÍNIMO 300px ---- */
+/*  MÍNIMO 300px */
 @media (max-width: 320px) {
   .servicio-card {
     width: 100%;
   }
 }
 
-/* ---- TABLET (max 768px) ---- */
+/*RESPONSIVE DES ENCABEZADO*/
+
+/*  TABLET  */
 @media (max-width: 768px) {
   .contenedor-header {
-    flex-direction: column;
+    flex-direction: column;/*se empiezan a comportar en columna porque sino colapsan*/
     gap: 1rem;
     padding: 1rem;
   }
@@ -370,7 +410,7 @@ a:hover::after {
   }
 }
 
-/* ---- CELULAR (max 480px) ---- */
+/*  CELULAR */
 @media (max-width: 480px) {
   .contenedor-logo {
     width: 180px;
@@ -388,7 +428,7 @@ a:hover::after {
   }
 }
 
-/* ---- MÍNIMO 300px ---- */
+/*  MÍNIMO  */
 @media (max-width: 320px) {
   .contenedor-logo {
     width: 140px;
@@ -398,7 +438,10 @@ a:hover::after {
     font-size: 0.8rem;
   }
 }
-/* ---- TABLET (max 768px) ---- */
+
+/*RESPONSIVE DE HERO*/
+
+/*  TABLET */
 @media (max-width: 768px) {
   .hero {
     min-height: 60vh;
@@ -410,7 +453,7 @@ a:hover::after {
   }
 }
 
-/* ---- CELULAR (max 480px) ---- */
+/*  CELULAR */
 @media (max-width: 480px) {
   .hero {
     min-height: 50vh;
@@ -433,7 +476,7 @@ a:hover::after {
   }
 }
 
-/* ---- MÍNIMO 300px ---- */
+/*  MÍNIMO  */
 @media (max-width: 320px) {
   .hero-texto h1 {
     font-size: 1.2rem;
@@ -444,9 +487,7 @@ a:hover::after {
   }
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* FOOTER*/
 footer {
   background-color: var(--color-oscuro);
   padding: 60px 5% 20px;
@@ -521,7 +562,9 @@ footer {
   font-size: 0.8rem;
 }
 
-/* ---- TABLET (max 768px) ---- */
+/*RESPONSIVE DE EL FOOTER*/
+
+/*  TABLET */
 @media (max-width: 768px) {
   .footer-contenido {
     flex-wrap: wrap;
@@ -529,10 +572,11 @@ footer {
   }
 }
 
-/* ---- CELULAR (max 480px) ---- */
+/*  CELULAR  */
 @media (max-width: 480px) {
   .footer-contenido {
     flex-direction: column;
+    align-items: center;
   }
 
   .footer-marca {
