@@ -1,0 +1,204 @@
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.contenedor-logo {
+  width: 300px;
+}
+
+.imagen-logo {
+  width: 100%;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  border-bottom: 2px solid #fff;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+header {
+  background-color: var(--color-oscuro); 
+  padding: 1rem 5%;
+}
+
+/*SECCIÓN RESERVA */
+.seccion-reserva {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 0 5%;
+}
+
+.reserva-titulo {
+  font-size: 1.5rem;
+  color: var(--color-texto);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* FORMULARIO*/
+.reserva-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-grupo label {
+  color: var(--color-texto-suave);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-grupo input,
+.form-grupo select {
+  background-color: var(--color-fondo-card);
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  color: var(--color-texto);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+  width: 100%;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus {
+  border-color: var(--color-acento);
+}
+
+.form-fieldset {
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  padding: 1.2rem;
+}
+
+.form-legend {
+  color: var(--color-texto-suave);
+}
+
+.form-radio-grupo,
+.form-check-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.form-radio-label,
+.form-check-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-texto);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-radio-label input[type="radio"],
+.form-check-label input[type="checkbox"] {
+  accent-color: var(--color-acento);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.form-grupo textarea {
+  background-color: var(--color-fondo-card);
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  color: var(--color-texto);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+  width: 100%;
+  resize: vertical; 
+  font-family: inherit; 
+}
+
+.form-grupo textarea:focus {
+  border-color: var(--color-acento);
+}
+
+.btn-limpiar {
+  padding: 0.85rem;
+  background-color: transparent;
+  color: var(--color-texto-suave);
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-limpiar:hover {
+  border-color: var(--color-texto-suave);
+  color: var(--color-texto);
+}
+
+.btn-reserva {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  background-color: transparent;
+  color: var(--color-texto);
+  border: 2px solid var(--color-acento);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-reserva:hover {
+  background-color: var(--color-acento);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .seccion-reserva {
+    margin: 40px auto;
+  }
+
+  .reserva-titulo {
+    font-size: 1rem;
+  }
+
+  .form-fieldset {
+    padding: 1rem;
+  }
+}

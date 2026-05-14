@@ -1,11 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservas</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/reserva.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-header">
+        <div class="contenedor-logo">
+          <img
+            class="imagen-logo"
+            src="img/logo_youdrive.svg"
+            alt="Logo de YouDrive"
+          />
+        </div>
+        <nav>
+          <ul class="nav-ul">
+            <li><a href="index.html">Volver al inicio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="seccion-reserva">
+      <h2 class="reserva-titulo">Información Personal</h2>
+
+      <form class="reserva-form" action="#" method="get">
+        <div class="form-grupo">
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan García" autocomplete="name" required/>
+        </div>
+        <div class="form-grupo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ej: juan@email.com" autocomplete="email" required/>
+        </div>
+
+        <div class="form-grupo">
+          <label for="telefono">Número de teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 11 1234-5678" required/>
+        </div>
+
+        <div class="form-grupo">
+          <label for="documento">DNI / Pasaporte</label>
+          <input type="text" id="documento" name="documento" placeholder="Ej: 12345678" required />
+        </div>
+
+        <h2 class="reserva-titulo">Información de la reserva</h2>
+        <div class="form-grupo">
+          <label for="tipo-vehiculo">Tipo de vehículo</label>
+          <select id="tipo-vehiculo" name="tipo-vehiculo" required>
+            <option value="" disabled selected>Seleccioná un tipo</option>
+            <option value="auto">Auto</option>
+            <option value="suv">SUV</option>
+            <option value="camioneta">Camioneta</option>
+            <option value="furgon">Furgón</option>
+          </select>
+        </div>
+
+        <div class="form-grupo">
+          <label for="modelo">Modelo seleccionado</label>
+          <input type="text" id="modelo" name="modelo" placeholder="Ej: Toyota Corolla" required />
+        </div>
+
+        <div class="form-grupo">
+          <label for="fecha-retiro">Fecha de retiro</label>
+          <input type="date" id="fecha-retiro" name="fecha-retiro" required />
+        </div>
+
+        <div class="form-grupo">
+          <label for="fecha-devolucion">Fecha de devolución</label>
+          <input type="date" id="fecha-devolucion" name="fecha-devolucion" required/>
+        </div>
+
+        <div class="form-grupo">
+          <label for="hora-retiro">Hora de retiro</label>
+          <input type="time" id="hora-retiro" name="hora-retiro" required />
+        </div>
+
+        <div class="form-grupo">
+          <label for="sucursal">Sucursal de retiro</label>
+          <select id="sucursal" name="sucursal" required>
+            <option value="" disabled selected>Seleccioná una sucursal</option>
+            <option value="centro">Ramallo</option>
+            <option value="norte">San Nicolas</option>
+            <option value="sur">CABA</option>
+            <option value="aeropuerto">Rosario</option>
+          </select>
+        </div>
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Método de pago</legend>
+          <div class="form-radio-grupo">
+            <label class="form-radio-label">
+              <input type="radio" name="pago" value="tarjeta" required />
+              Tarjeta de crédito
+            </label>
+            <label class="form-radio-label">
+              <input type="radio" name="pago" value="debito" /> Tarjeta de
+              débito
+            </label>
+            <label class="form-radio-label">
+              <input type="radio" name="pago" value="efectivo" /> Efectivo
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Opciones Adicionales</legend>
+          <div class="form-check-grupo">
+            <label class="form-check-label">
+              <input type="checkbox" name="extras" value="gps" /> GPS incluido
+            </label>
+            <label class="form-check-label">
+              <input type="checkbox" name="extras" value="silla-ninos" /> Silla
+              para niños
+            </label>
+            <label class="form-check-label">
+              <input type="checkbox" name="extras" value="seguro-full" /> Seguro
+              full
+            </label>
+            <label class="form-check-label">
+              <input
+                type="checkbox"
+                name="extras"
+                value="conductor-adicional"
+              />
+              Conductor adicional
+            </label>
+          </div>
+        </fieldset>
+        <div class="form-grupo">
+          <label for="comentarios">Comentarios u observaciones</label>
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            placeholder="Observacion"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+        <button type="submit" class="btn-reserva">Confirmar reserva</button>
+      </form>
+    </section>
+  </body>
 </html>
