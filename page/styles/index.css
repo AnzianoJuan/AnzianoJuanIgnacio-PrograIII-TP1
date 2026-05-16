@@ -2,9 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0; /* necesario para que se pegue arriba */
-  z-index: 100; /*  para que quede por encima del contenido al hacer scroll */
 }
 
 /*contenedor del logo con 300px*/
@@ -76,7 +73,7 @@ en columna*/
   max-width: 500px;
 }
 
-.p-hero{
+.p-hero {
   color: rgb(255, 255, 255);
 }
 
@@ -163,7 +160,6 @@ en columna*/
 }
 
 /*se le aplica a todos los hijos de card que sean p*/
-
 
 .servicio-card p {
   color: var(--color-texto-suave);
@@ -272,6 +268,8 @@ en columna*/
   font-size: 2rem;
   color: var(--color-texto);
   margin-bottom: 1rem;
+  font-family: "Bodoni Moda", serif;
+  font-size: xx-large;
 }
 
 .nosotros-bloque {
@@ -301,7 +299,6 @@ en columna*/
     flex-direction: column;
     gap: 2rem;
   }
-
 }
 
 /*  CELULAR (max 480px) */
@@ -398,9 +395,13 @@ en columna*/
 /*  TABLET  */
 @media (max-width: 768px) {
   .contenedor-header {
-    flex-direction: column;/*se empiezan a comportar en columna porque sino colapsan*/
+    flex-direction: column; /*se empiezan a comportar en columna porque sino colapsan*/
     gap: 1rem;
     padding: 1rem;
+  }
+
+  header {
+    position: static;
   }
 
   .nav-ul {
@@ -412,6 +413,10 @@ en columna*/
 
 /*  CELULAR */
 @media (max-width: 480px) {
+  header {
+    position: static;
+  }
+
   .contenedor-logo {
     width: 180px;
   }
@@ -423,13 +428,18 @@ en columna*/
   }
 
   .btn-primario {
-    width: 100%;
+    width: 55%;
+    font-size: x-small;
     text-align: center;
   }
 }
 
 /*  MÍNIMO  */
 @media (max-width: 320px) {
+  header {
+    position: static;
+  }
+
   .contenedor-logo {
     width: 140px;
   }
@@ -577,6 +587,14 @@ footer {
   .footer-contenido {
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-info{
+    text-align: center;
+  }
+
+  .footer-horarios{
+    text-align: center;
   }
 
   .footer-marca {

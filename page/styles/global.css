@@ -11,6 +11,7 @@
   --color-acento-hover: #990008;
 
   --color-borde: #2e2e2e;
+  --color-oscuro: #0a0a0a;
 }
 
 * {
@@ -24,6 +25,14 @@ body {
   font-weight: 300;
   background-color: var(--color-fondo);
   color: var(--color-texto);
+}
+
+header {
+  background-color: var(--color-oscuro);
+  padding: 1rem 5%;
+  /* position: sticky; */
+  /* top: 0; */
+  /* z-index: 100; */
 }
 
 img {
