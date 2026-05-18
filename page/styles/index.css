@@ -167,9 +167,7 @@ en columna*/
   line-height: 1.5;
 }
 
-/* ===========================
-   VEHICULOS DESTACADOS
-=========================== */
+/* VEHICULOS DESTACADOS */
 .destacados {
   padding: 80px 5%;
   background-color: var(--color-fondo);
@@ -301,7 +299,7 @@ en columna*/
   }
 }
 
-/*  CELULAR (max 480px) */
+/*  CELULAR */
 @media (max-width: 480px) {
   .nosotros {
     padding: 50px 5%;

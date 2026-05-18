@@ -94,7 +94,7 @@ header {
 
 .form-grupo input:focus,
 .form-grupo select:focus {
-  border-color: var(--color-acento);
+  border-color: var(--color-acento);/*cuando se hace focus aparece el borde rojo*/
 }
 
 .form-fieldset {
@@ -125,6 +125,8 @@ header {
   cursor: pointer;
 }
 
+
+/*a los hijos descendentes de tipo radio y checkbox , se le asignan esos valores*/
 .form-radio-label input[type="radio"],
 .form-check-label input[type="checkbox"] {
   accent-color: var(--color-acento);
