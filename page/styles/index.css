@@ -235,7 +235,7 @@ en columna*/
 }
 
 .vehiculo-precio {
-  color: var(--color-acento);
+  color: rgb(213, 93, 93);
   font-size: 1.1rem;
   font-weight: 500;
 }
